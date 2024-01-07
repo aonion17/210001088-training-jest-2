@@ -1,8 +1,8 @@
 // @ Try to check and change the return value of setProductsCards function
 const setProductsCards = (products) => {
-  const productsCards = products.map((product) => {
+  const productsCards = products?.map((product) => {
     return {
-      price: convertToRupiah(product.price),
+      price: convertToRupiah(product.price).toString(),
       after_discount: countDiscount(product.price, product.discountPercentage),
       image: product.thumbnail,
     };
